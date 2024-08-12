@@ -8,7 +8,10 @@ module.exports = {
     'import/resolver': {
       alias: {
         extensions: ['.js', '.ts', '.tsx', '.d.ts', '.native'],
-        map: [['@', './src/']],
+        map: [
+          ['@', './src/'],
+          ['@home', './src/features/home/'],
+        ],
       },
     },
   },

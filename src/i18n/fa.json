@@ -1,4 +1,8 @@
 {
+  "common": {
+    "offlineToast": "Check internet connection!",
+    "unknownErrorToast": "Error occured!"
+  },
   "splash": {
     "title": "fashion."
   }
