@@ -1,10 +1,18 @@
-import {Text, View} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import React from 'react';
+import {AppScreen} from '@/components';
 
 export const Splash = () => {
   return (
-    <View>
-      <Text>Splash</Text>
-    </View>
+    <AppScreen style={styles.content}>
+      <Text>Fasion</Text>
+    </AppScreen>
   );
 };
+
+const styles = StyleSheet.create({
+  content: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
