@@ -6,7 +6,7 @@ import {translate} from '@/i18n';
 import {AppTextPresets, presets} from './app-text.presets';
 import {Color, COLORS} from '@/styles';
 
-interface AppTextProps extends TextProps {
+export interface AppTextProps extends TextProps {
   translateOptions?: I18n.TranslateOptions;
 
   translateKey?: string;

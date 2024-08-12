@@ -39,6 +39,11 @@ export const presets = {
     ...BASE,
     fontSize: FONT_SIZE.x24,
   } as TextStyle,
+  arialBold16: {
+    ...BASE,
+    fontSize: FONT_SIZE.x16,
+    fontWeight: 'bold',
+  } as TextStyle,
 };
 
 /**

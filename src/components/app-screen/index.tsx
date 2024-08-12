@@ -7,7 +7,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import React, {ReactNode} from 'react';
-import {COLORS, SPACING} from '@/styles';
+import {COLORS} from '@/styles';
 
 type AppScreenProps = {
   scrollable?: boolean;
@@ -43,6 +43,5 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.white,
     flex: 1,
-    padding: SPACING.x16,
   },
 });
