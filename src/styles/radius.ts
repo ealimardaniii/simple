@@ -26,5 +26,5 @@ export const RADIUS = {
   /**
    * `100`
    */
-  rounded: 100,
+  rounded: 200,
 };

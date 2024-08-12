@@ -5,6 +5,7 @@ import {RootStackParamList} from './types';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {Splash} from '@/features/auth/screens';
+import {ProductList} from '@/features/home/screens';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
@@ -17,11 +18,8 @@ export const SCREEN_OPTIONS = {
 export const AppNavigationContainer = () => {
   return (
     <RootStack.Navigator screenOptions={SCREEN_OPTIONS}>
-      <RootStack.Screen
-        name="splash"
-        component={Splash}
-        options={TransitionPresets.SlideFromRightIOS}
-      />
+      <RootStack.Screen name="splash" component={Splash} />
+      <RootStack.Screen name="productList" component={ProductList} />
     </RootStack.Navigator>
   );
 };
