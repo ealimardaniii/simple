@@ -4,7 +4,7 @@ import React from 'react';
 import {RootStackParamList} from './types';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {Splash} from '../features/auth/screens';
+import {Splash} from '@/features/auth/screens';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
