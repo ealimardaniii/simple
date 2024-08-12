@@ -27,7 +27,7 @@ export const AppScreen = ({
 }: AppScreenProps) => {
   return (
     <SafeAreaView style={[styles.container, style]}>
-      <StatusBar backgroundColor={COLORS.white} />
+      <StatusBar hidden />
       {scrollable ? (
         <ScrollView contentContainerStyle={contentContainerStyle}>
           {children}
