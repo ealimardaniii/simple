@@ -9,7 +9,7 @@ import {SPACING} from '@/styles';
 export const ProductList = () => {
   const [searchText, setSearchText] = useState('');
 
-  const {data, refetch, isFetching} = useProductList({
+  const {data, refetch, isFetching, isLoading} = useProductList({
     select: res => res.filter(p => p.title.includes(searchText)),
   });
 
@@ -31,7 +31,9 @@ export const ProductList = () => {
         keyExtractor={item => item.id.toString()}
         contentContainerStyle={styles.content}
         ListEmptyComponent={
-          <AppText style={styles.empty} translateKey="productList.noResult" />
+          isLoading ? null : (
+            <AppText style={styles.empty} translateKey="productList.noResult" />
+          )
         }
       />
     </AppScreen>

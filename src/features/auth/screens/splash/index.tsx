@@ -37,7 +37,7 @@ export const Splash = ({navigation}: Props) => {
   useEffect(() => {
     runAnimations();
     const timer = setTimeout(
-      () => navigation.navigate('productList'),
+      () => navigation.replace('productList'),
       ANIMATION_DURATION * 2,
     );
 

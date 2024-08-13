@@ -19,25 +19,13 @@ export const presets = {
     fontSize: FONT_SIZE.x28,
     fontFamily: FONT_FAMILY.decondorBold,
   } as TextStyle,
-  arial12: {
-    ...BASE,
-    fontSize: FONT_SIZE.x12,
-  } as TextStyle,
   arial14: {
     ...BASE,
     fontSize: FONT_SIZE.x14,
   } as TextStyle,
-  arial16: {
-    ...BASE,
-    fontSize: FONT_SIZE.x16,
-  } as TextStyle,
   arial20: {
     ...BASE,
     fontSize: FONT_SIZE.x20,
-  } as TextStyle,
-  arial24: {
-    ...BASE,
-    fontSize: FONT_SIZE.x24,
   } as TextStyle,
   arialBold16: {
     ...BASE,
