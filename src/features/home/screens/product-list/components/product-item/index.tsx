@@ -5,10 +5,22 @@ import {StyleSheet} from 'react-native';
 import {AppImage, AppText, AppTextCurrency} from '@/components';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {COLORS, RADIUS, SHADOWS, SPACING} from '@/styles';
+import {useAppNavigation} from '@/navigation';
 
-export const ProductItem = ({title, image, rating: {rate}, price}: Product) => {
+export const ProductItem = (props: Product) => {
+  const {
+    title,
+    image,
+    rating: {rate},
+    price,
+  } = props;
+
+  const navigation = useAppNavigation();
+
   return (
-    <Pressable style={styles.container}>
+    <Pressable
+      style={styles.container}
+      onPress={() => navigation.navigate('productDetails', {product: props})}>
       <AppImage uri={image} style={styles.image} />
       <View style={styles.content}>
         <AppText text={title} numberOfLines={2} style={styles.title} />
@@ -40,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     flex: 1,
     marginBottom: SPACING.x16,
-    marginHorizontal: SPACING.x4,
+    marginHorizontal: SPACING.x8,
     borderRadius: RADIUS.x8,
     borderWidth: 1,
     borderColor: COLORS.athensGray,

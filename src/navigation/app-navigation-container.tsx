@@ -5,7 +5,7 @@ import {RootStackParamList} from './types';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {Splash} from '@/features/auth/screens';
-import {ProductList} from '@/features/home/screens';
+import {ProductDetails, ProductList} from '@/features/home/screens';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
@@ -20,6 +20,7 @@ export const AppNavigationContainer = () => {
     <RootStack.Navigator screenOptions={SCREEN_OPTIONS}>
       <RootStack.Screen name="splash" component={Splash} />
       <RootStack.Screen name="productList" component={ProductList} />
+      <RootStack.Screen name="productDetails" component={ProductDetails} />
     </RootStack.Navigator>
   );
 };

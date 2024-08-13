@@ -8,11 +8,14 @@ import {
 } from 'react-native';
 import React, {ReactNode} from 'react';
 import {COLORS} from '@/styles';
+import {AppHeader, AppHeaderProps} from '../app-header';
 
 type AppScreenProps = {
   scrollable?: boolean;
 
   children: ReactNode;
+
+  headerProps?: AppHeaderProps;
 
   contentContainerStyle?: StyleProp<ViewStyle>;
 
@@ -22,12 +25,14 @@ type AppScreenProps = {
 export const AppScreen = ({
   scrollable,
   children,
+  headerProps,
   style,
   contentContainerStyle,
 }: AppScreenProps) => {
   return (
     <SafeAreaView style={[styles.container, style]}>
       <StatusBar hidden />
+      {headerProps && <AppHeader {...headerProps} />}
       {scrollable ? (
         <ScrollView contentContainerStyle={contentContainerStyle}>
           {children}

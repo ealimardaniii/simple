@@ -1,7 +1,9 @@
+import {Product} from '@/features/home/api/types';
+
 export type RootStackParamList = {
   splash: undefined;
 
   productList: undefined;
 
-  product: {id: number};
+  productDetails: {product: Product};
 };

@@ -32,7 +32,8 @@ export const ProductList = () => {
 
 const styles = StyleSheet.create({
   content: {
-    padding: SPACING.x16,
+    paddingHorizontal: SPACING.x8,
     paddingBottom: SPACING.none,
+    paddingTop: SPACING.x16,
   },
 });
