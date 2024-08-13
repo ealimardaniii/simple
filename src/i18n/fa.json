@@ -8,5 +8,8 @@
   },
   "productDetails": {
     "title": "Product Details"
+  },
+  "productList": {
+    "noResult": "No Result!"
   }
 }
